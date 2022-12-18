@@ -7,7 +7,7 @@ const Result = ({ result }) => {
   return (
     <div className={styles.base}>
       <h4>Result:</h4>
-      <p>{result || "nothing yet..."}</p>
+      <p className={styles.result}>{result || "nothing yet..."}</p>
     </div>
   );
 };
