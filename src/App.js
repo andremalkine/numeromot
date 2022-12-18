@@ -8,16 +8,14 @@ import Entry from "components/Entry";
 
 function App() {
   const [entry, setEntry] = useState("");
-  const update = (e) => setEntry(e.target.value);
-  const result = generate(entry);
 
   return (
     <div className={styles.base}>
       <div className={styles.container}>
         <h1>NuméroMot</h1>
         <Legend />
-        <Entry value={entry} onChange={update} />
-        <Result result={result} />
+        <Entry onSubmit={setEntry} />
+        <Result result={entry} />
       </div>
     </div>
   );
