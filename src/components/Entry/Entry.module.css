@@ -1,10 +1,16 @@
 .base {
+  position: relative;
+}
+
+#entry {
+  position: relative;
+  padding: 6px 12px;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .label {
