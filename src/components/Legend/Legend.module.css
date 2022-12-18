@@ -1,0 +1,13 @@
+.base {
+  margin-bottom: 32px;
+}
+
+.legend {
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  list-style-type: none;
+}
+
+.legend li {
+  padding: 0;
+}
