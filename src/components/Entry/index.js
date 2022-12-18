@@ -16,10 +16,15 @@ const Entry = ({ onSubmit }) => {
     <div className={styles.base}>
       <form onSubmit={submit}>
         <div className={styles.inputGroup}>
-          <label htmlFor="entry" className={styles.label}>
+          <label htmlFor={styles.entry} className={styles.label}>
             Enter Text:
           </label>
-          <input id="entry" type="text" value={value} onChange={update} />
+          <input
+            id={styles.entry}
+            type="text"
+            value={value}
+            onChange={update}
+          />
         </div>
         <button type="submit" onClick={submit}>
           Generate
