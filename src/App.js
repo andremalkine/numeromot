@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import { generate } from "lib/util";
+import styles from "./App.module.css";
+import Legend from "components/Legend";
+import Result from "components/Result";
+import Entry from "components/Entry";
 
 function App() {
+  const [entry, setEntry] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.base}>
+      <div className={styles.container}>
+        <h1>NuméroMot</h1>
+        <Legend />
+        <Entry onSubmit={setEntry} />
+        <Result result={entry} />
+      </div>
     </div>
   );
 }
