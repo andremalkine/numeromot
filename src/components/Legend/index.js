@@ -9,14 +9,16 @@ const Legend = () => {
   return (
     <div className={styles.base}>
       {showLegend && (
-        <ul className={styles.legend}>
-          {Object.keys(POS).map((key, i) => (
-            <li key={key}>
-              {i} - {POS[key]}
-            </li>
-          ))}
-          {/* <li>Anything else will remain unchanged.</li> */}
-        </ul>
+        <>
+          <ul className={styles.legend}>
+            {Object.keys(POS).map((key, i) => (
+              <li key={key}>
+                {i} - {POS[key]}
+              </li>
+            ))}
+          </ul>
+          <p>Text will remain unchanged.</p>
+        </>
       )}
       <button onClick={() => setShowLegend(!showLegend)}>
         {showLegend ? "Hide" : "Show"} Legend

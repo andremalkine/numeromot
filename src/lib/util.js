@@ -1,3 +1,3 @@
-export const render = (entry) => {
-  return entry;
+export const generate = (input) => {
+  return input;
 };

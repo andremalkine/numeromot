@@ -3,19 +3,13 @@ import PropTypes from "prop-types";
 
 import styles from "./Entry.module.css";
 
-const Entry = ({ onChange }) => {
-  const [entry, setEntry] = useState("");
+const Entry = ({ value, onChange }) => {
   return (
     <div className={styles.base}>
       <label htmlFor="entry" className={styles.label}>
         Enter Text:
       </label>
-      <input
-        id="entry"
-        type="text"
-        value={entry}
-        onChange={(e) => setEntry(e.target.value)}
-      />
+      <input id="entry" type="text" value={value} onChange={onChange} />
     </div>
   );
 };
