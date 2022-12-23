@@ -7,6 +7,10 @@
   padding: 6px 12px;
 }
 
+#entry::placeholder {
+  color: #b0b0b0;
+}
+
 .inputGroup {
   display: flex;
   flex-direction: column;

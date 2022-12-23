@@ -16,9 +16,25 @@
 .result {
   font-size: 32px;
   margin-top: 0;
+  hyphens: auto;
+  line-height: 1.8em;
 }
 
 .empty {
   color: grey;
   font-style: italic;
+}
+
+.word {
+  border: none;
+  border-bottom: 2px dotted black;
+  cursor: pointer;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 2px 8px;
+  transition: all 333ms;
+}
+
+.word:hover {
+  background: pink;
 }

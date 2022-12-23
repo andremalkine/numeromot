@@ -1,6 +1,29 @@
 import { POS } from "./constants";
 import dictionary from "./pos-dictionary.json";
 
+export const parseEntry = (entry) =>
+  entry.split("").map((c) => ({
+    type: isNaN(parseInt(c, 10)) ? "text" : "pos",
+    value: c,
+  }));
+
+export const getPOS = (char, i) => {
+  const n = parseInt(char, 10);
+  if (isNaN(n)) {
+    return char;
+  }
+  const posInt = n > 0 ? n : randomRange(1, 9);
+  const pos = POS[Object.keys(POS)[posInt]];
+  const words = dictionary[pos];
+  const randomIndex = randomRange(0, words.length - 1);
+  const word = words[randomIndex];
+  const finalWord =
+    word.indexOf(";") === -1 ? word : word.slice(0, word.indexOf(";"));
+  return i === 0
+    ? finalWord.charAt(0).toUpperCase() + finalWord.toLowerCase().slice(1)
+    : finalWord.toLowerCase();
+};
+
 export const generate = (input) =>
   input
     .split("")

@@ -14,6 +14,12 @@
   padding: 0 32px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1280px;
+  max-width: 970px;
   padding-bottom: 80px;
+}
+
+@media (min-width: 970px) {
+  .container {
+    padding-bottom: 128px;
+  }
 }
