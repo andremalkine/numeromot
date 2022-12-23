@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { generate } from "lib/util";
 import styles from "./App.module.css";
 import Legend from "components/Legend";
 import Result from "components/Result";
@@ -15,7 +14,7 @@ function App() {
         <h1>NuméroMot</h1>
         <Legend />
         <Entry onSubmit={setEntry} />
-        <Result result={entry} />
+        <Result entry={entry} />
       </div>
     </div>
   );
